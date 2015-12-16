@@ -1,6 +1,7 @@
 define([
   'angular',
   'lodash',
+  'public/plugins/templating_json/bower_components/jmespath.js/jmespath.js',
 ],
 function (angular, _) {
   'use strict';

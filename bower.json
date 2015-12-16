@@ -1,0 +1,11 @@
+{
+  "name": "datasource-plugin-templating_json",
+  "homepage": "https://github.com/mtanda/datasource-plugin-templating_json",
+  "authors": [
+    "Mitsuhiro Tanda <mitsuhiro.tanda@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "Apache 2.0"
+}

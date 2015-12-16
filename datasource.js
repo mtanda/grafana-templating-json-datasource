@@ -45,16 +45,7 @@ function (angular, _) {
       }
 
       return this._request('GET', this.url).then(function(response) {
-        var result = response.data;
-        var keys = query.split('.');
-        keys.shift();
-
-        _.each(keys, function(key) {
-          if (!result[key]) {
-            throw new Error('invalid query');
-          }
-          result = result[key];
-        });
+        var result = jmespath.search(response.data, query);
 
         if (_.isString(result)) {
           return [{ text: result }];

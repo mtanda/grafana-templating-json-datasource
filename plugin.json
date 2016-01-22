@@ -1,20 +1,11 @@
 {
-  "pluginType": "datasource",
+  "type": "datasource",
   "name": "Templating_JSON",
+  "id": "templating_json",
 
-  "type": "templating_json",
-  "serviceName": "TemplatingJsonDatasource",
+  "module": "plugins/templating_json/module",
 
-  "module": "plugins/templating_json/datasource",
-
-  "partials": {
-    "config": "public/plugins/templating_json/partials/config.html"
-  },
-
-  "staticRoot": {
-    "url": "templating_json",
-    "path": "."
-  },
+  "staticRoot": ".",
 
   "metrics": true
 }

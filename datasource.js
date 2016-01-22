@@ -1,23 +1,21 @@
 define([
   'angular',
   'lodash',
-  'public/plugins/templating_json/bower_components/jmespath.js/jmespath.js',
+  'plugins/templating_json/bower_components/jmespath.js/jmespath.js',
 ],
-function (angular, _) {
+function (angular, _, jmespath) {
   'use strict';
 
-  var module = angular.module('grafana.services');
+  /** @ngInject */
+  function TemplatingJsonDatasource(instanceSettings, $q, backendSrv, templateSrv) {
 
-  module.factory('TemplatingJsonDatasource', function($q, backendSrv, templateSrv) {
-    function TemplatingJsonDatasource(datasource) {
-      this.type = 'templating_json';
-      this.name = datasource.name;
-      this.url = datasource.url;
-      this.basicAuth = datasource.basicAuth;
-      this.withCredentials = datasource.withCredentials;
-    }
+    this.type = 'templating_json';
+    this.name = instanceSettings.name;
+    this.url = instanceSettings.url;
+    this.basicAuth = instanceSettings.basicAuth;
+    this.withCredentials = instanceSettings.withCredentials;
 
-    TemplatingJsonDatasource.prototype._request = function(method, url) {
+    this._request = function(method, url) {
       var options = {
         url: url,
         method: method
@@ -28,14 +26,14 @@ function (angular, _) {
       }
       if (this.basicAuth) {
         options.headers = {
-          "Authorization": this.basicAuth
+          'Authorization': this.basicAuth
         };
       }
 
       return backendSrv.datasourceRequest(options);
     };
 
-    TemplatingJsonDatasource.prototype.metricFindQuery = function(query) {
+    this.metricFindQuery = function(query) {
       if (!query) { return $q.when([]); }
 
       try {
@@ -57,12 +55,12 @@ function (angular, _) {
       });
     };
 
-    TemplatingJsonDatasource.prototype.testDatasource = function() {
+    this.testDatasource = function() {
       return this._request('GET', this.url).then(function() {
         return { status: 'success', message: 'Data source is working', title: 'Success' };
       });
     };
+  }
 
-    return TemplatingJsonDatasource;
-  });
+  return TemplatingJsonDatasource;
 });

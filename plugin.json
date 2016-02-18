@@ -3,9 +3,21 @@
   "name": "Templating_JSON",
   "id": "templating_json",
 
-  "module": "plugins/templating_json/module",
-
   "staticRoot": ".",
 
-  "metrics": true
+  "metrics": true,
+
+  "info": {
+    "description": "datasource plugin for Templating by JSON",
+    "author": {
+      "name": "Mitsuhiro Tanda"
+    },
+    "version": "0.1.0",
+    "updated": "2016-02-15"
+  },
+
+  "dependencies": {
+    "grafanaVersion": "2.6.x",
+    "plugins": [ ]
+  }
 }

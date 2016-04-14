@@ -3,8 +3,8 @@ Clone this repository somewhere.
 And, edit your grafana.ini config file and add this:
 
 ```ini
-[plugin.templating_json]
-path = /home/your/clone/dir/datasource-plugin-templating_json
+[plugin.templating-json]
+path = /home/your/clone/dir/grafana-templating-json-datasource
 ```
 
 # How to use

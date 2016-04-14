@@ -1,7 +1,7 @@
 define([
   'angular',
   'lodash',
-  'plugins/templating_json/bower_components/jmespath.js/jmespath.js',
+  'plugins/grafana-templating-json-datasource/bower_components/jmespath.js/jmespath.js',
   'app/plugins/sdk',
 ],
 function (angular, _, jmespath) {

@@ -1,6 +1,5 @@
 {
-  "name": "datasource-plugin-templating_json",
-  "homepage": "https://github.com/mtanda/datasource-plugin-templating_json",
+  "name": "grafana-templating-json-datasource",
   "authors": [
     "Mitsuhiro Tanda <mitsuhiro.tanda@gmail.com>"
   ],

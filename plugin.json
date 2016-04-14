@@ -1,7 +1,7 @@
 {
   "type": "datasource",
-  "name": "Templating_JSON",
-  "id": "templating_json",
+  "name": "TemplatingJson",
+  "id": "grafana-templating-json-datasource",
 
   "staticRoot": ".",
 
@@ -12,6 +12,9 @@
     "author": {
       "name": "Mitsuhiro Tanda"
     },
+    "links": [
+      {"name": "GitHub", "url": "https://github.com/mtanda/grafana-templating-json-datasource"}
+    ],
     "version": "0.1.0",
     "updated": "2016-02-15"
   },

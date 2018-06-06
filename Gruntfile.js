@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
   require('load-grunt-tasks')(grunt);
 
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
       rebuild_all: {
         files: ['src/**/*'],
         tasks: ['default'],
-        options: {spawn: false}
+        options: { spawn: false }
       }
     },
 
@@ -45,7 +45,16 @@ module.exports = function(grunt) {
           expand: true,
           src: ['**/*.js'],
           dest: 'dist',
-          ext:'.js'
+          ext: '.js'
+        }]
+      },
+      distNoSystemJs: {
+        files: [{
+          cwd: 'src',
+          expand: true,
+          src: ['**/bower_components/jmespath/*.js'],
+          dest: 'dist',
+          ext: '.js'
         }]
       },
       distTestNoSystemJs: {
@@ -54,7 +63,7 @@ module.exports = function(grunt) {
           expand: true,
           src: ['**/*.js'],
           dest: 'dist/test',
-          ext:'.js'
+          ext: '.js'
         }]
       },
       distTestsSpecsNoSystemJs: {
@@ -63,7 +72,7 @@ module.exports = function(grunt) {
           cwd: 'spec',
           src: ['**/*.js'],
           dest: 'dist/test/spec',
-          ext:'.js'
+          ext: '.js'
         }]
       }
     },

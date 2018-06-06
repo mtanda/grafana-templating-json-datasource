@@ -1,26 +1,31 @@
 {
-  "type": "datasource",
   "name": "TemplatingJson",
-  "id": "grafana-templating-json-datasource",
+  "id": "mtanda-templating-json-datasource",
+  "type": "datasource",
 
-  "staticRoot": ".",
+  "partials": {
+    "config": "public/app/plugins/datasource/mtanda-templating-json-datasource/partials/config.html"
+  },
 
   "metrics": true,
 
   "info": {
-    "description": "datasource plugin for Templating by JSON",
+    "description": "TemplatingJson datasource",
     "author": {
       "name": "Mitsuhiro Tanda"
     },
     "links": [
-      {"name": "GitHub", "url": "https://github.com/mtanda/grafana-templating-json-datasource"}
+      {"name": "GitHub", "url": "https://github.com/mtanda/grafana-templating-json-datasource"},
+      {"name": "Apache License", "url": "https://github.com/mtanda/grafana-templating-json-datasource/blob/master/LICENSE"}
     ],
-    "version": "0.1.0",
-    "updated": "2016-02-15"
+    "screenshots": [
+    ],
+    "version": "1.0.0",
+    "updated": "2018-06-06"
   },
 
   "dependencies": {
-    "grafanaVersion": "2.6.x",
+    "grafanaVersion": "3.x.x",
     "plugins": [ ]
   }
 }

@@ -1,14 +1,7 @@
-define([
-  './datasource',
-],
-function (TemplatingJsonDatasource) {
-  'use strict';
+import { TemplatingJsonDatasource } from './datasource';
+import { TemplatingJsonConfigCtrl } from './config_ctrl';
 
-  var TemplatingJsonConfigCtrl = function() {};
-  TemplatingJsonConfigCtrl.templateUrl = 'partials/config.html';
-
-  return {
-    Datasource: TemplatingJsonDatasource,
-    ConfigCtrl: TemplatingJsonConfigCtrl
-  };
-});
+export {
+  TemplatingJsonDatasource as Datasource,
+  TemplatingJsonConfigCtrl as ConfigCtrl
+};
